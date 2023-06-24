@@ -14,9 +14,42 @@ Here, we are using the module; django-allauth
    py -3 -m venv venv
    venv\Scripts\activate.bat
    ```
-4. Intsall dependencies
+3. Intsall dependencies
    ```
    pip install django django-allauth
    ```
 
-6. Inside the ```settings.py``` add the following:
+4. Inside the ```settings.py``` add the following
+   
+4.1 Inside installed APPS
+   ```
+   INSTALLED_APPS = [
+    ...
+    # The following apps are required:
+    'django.contrib.auth',
+    'django.contrib.messages',
+    'django.contrib.sites',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    # ... include the providers you want to enable:
+   'allauth.socialaccount.providers.google'
+   ```
+
+4.2 Add site ID below ```INSTALLED_APPS```
+   ```
+   # add site ID
+   SITE_ID = 1
+   ```
+
+4.3 Inside ``urls.py``` add:
+   ```
+   urlpatterns = [
+       ...
+       path('accounts/', include('allauth.urls')),
+       ...
+   ]
+   ```
+
+8. 
