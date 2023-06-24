@@ -14,4 +14,9 @@ Here, we are using the module; django-allauth
    py -3 -m venv venv
    venv\Scripts\activate.bat
    ```
-4. 
+4. Intsall dependencies
+   ```
+   pip install django django-allauth
+   ```
+
+6. Inside the ```settings.py``` add the following:
