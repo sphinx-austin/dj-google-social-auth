@@ -1,2 +1,3 @@
-# dj-google-social-auth
-How to set up Google authentication Django project.
+# Getting started
+
+### How to set up Google authentication to Django project
