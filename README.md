@@ -43,7 +43,7 @@ Here, we are using the module; django-allauth
    SITE_ID = 1
    ```
 
-4.3 Inside ``urls.py``` add:
+4.3 Inside ```urls.py``` add:
    ```
    urlpatterns = [
        ...
@@ -52,4 +52,12 @@ Here, we are using the module; django-allauth
    ]
    ```
 
-8. 
+5. Run:
+   ```
+   python manage.py migrate
+   ```
+6. Create super user:
+   ```
+   python manage.py createsuperuser
+   ```
+7. Navigate to ```http://localhost:8000/admin``` 
