@@ -38,12 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-# The following apps are required:
+    # The following apps are required:
     
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    
+    # add google auth app
+    'allauth.socialaccount.providers.google',
 
 ]
 
