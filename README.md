@@ -60,4 +60,12 @@ Here, we are using the module; django-allauth
    ```
    python manage.py createsuperuser
    ```
-7. Navigate to ```http://localhost:8000/admin``` 
+7. Navigate to ```http://localhost:8000/admin```, and login using the creadentials created in the previous step. Under SOCIAL ACCOUNTS, ADD new social application. Select Google as the provider. Input dummy secret key and Id, and select example.com as the sites. The SAVE.
+
+8. At the SITES, edit the existing site domain name to 'site name' for your demo account.
+
+9. Go to ```https://console.cloud.google.com/apis/dashboard``` create GMAIL APIS. Create Credentials. Create URIs and copy&paste the CLIENT ID and SECRET KEY to the django admin, under the SOCIAL APPLICATION created in step 7 above.
+
+- NOTE: Authorized redirect URIs is ```http://127.0.0.1:8000/accounts/google/login/callback/```
+
+10. To test your authentication, logout as admin, and try signing in using Google.
